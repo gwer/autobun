@@ -1,8 +1,8 @@
-import { MatchedRoute } from 'bun';
+import { type MatchedRoute } from 'bun';
 import { render } from 'preact-render-to-string';
-import { FunctionComponent } from 'preact';
-import { AppComponentProps } from './types';
-import { AllProps } from './pageProps';
+import { type FunctionComponent } from 'preact';
+import { type AppComponentProps } from './types';
+import { type AllProps } from './pageProps';
 
 const STATIC_DIR = '.autobun/static';
 

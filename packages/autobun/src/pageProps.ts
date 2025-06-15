@@ -1,8 +1,8 @@
-import { MatchedRoute } from 'bun';
+import { type MatchedRoute } from 'bun';
 import {
-  PageGetServerSideProps,
-  AppGetServerSideProps,
-  PageSpecialProps,
+  type PageGetServerSideProps,
+  type AppGetServerSideProps,
+  type PageSpecialProps,
   isPagePropsNotFound,
   isPagePropsRedirect,
 } from './types';

@@ -1,5 +1,5 @@
-import { ComponentChildren } from 'preact';
-import { AppComponentProps } from 'autobun';
+import { type ComponentChildren } from 'preact';
+import { type AppComponentProps } from 'autobun';
 import DefaultLayout from '../components/DefaultLayout';
 
 const getDefaultLayout = (page: ComponentChildren) => (

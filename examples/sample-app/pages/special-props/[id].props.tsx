@@ -1,4 +1,4 @@
-import { PageGetServerSideProps, PageSpecialProps } from 'autobun';
+import { type PageGetServerSideProps, type PageSpecialProps } from 'autobun';
 
 const IDS_MAP: Record<string, PageSpecialProps> = {
   'permanent-redirect': {

@@ -1,4 +1,4 @@
-import { ComponentChildren } from 'preact';
+import { type ComponentChildren } from 'preact';
 import styles from './SidebarLayout.module.css';
 
 export default function SidebarLayout({

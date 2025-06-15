@@ -1,4 +1,4 @@
-import { PageGetServerSideProps } from 'autobun';
+import { type PageGetServerSideProps } from 'autobun';
 import packageJson from '../package.json';
 
 const getServerSideProps: PageGetServerSideProps = async () => {

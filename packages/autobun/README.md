@@ -59,7 +59,7 @@ bun upgrade
 If you don't have a project yet:
 
 ```bash
-bun init
+bun init # Choose "Blank" template
 ```
 
 ## Install Dependencies
@@ -68,9 +68,15 @@ bun init
 bun add autobun preact preact-render-to-string
 ```
 
-> Autobun doesn't have its own preact Preact to let you choose your preferred version and avoid conflicts.
+Autobun doesn't have its own preact Preact to let you choose your preferred version and avoid conflicts.
+
+## Activate Preact
+
+Add `"jsxImportSource": "preact"` to `tsconfig.json`.
 
 ## Create Pages
+
+Add `_document.tsx` and `_app.tsx` files. See [examples/sample-app](./examples/sample-app) for reference.
 
 Start creating pages in the `pages/` directory. Works similar to Next.js.
 
@@ -81,3 +87,35 @@ Check out `examples/` directory, especially `examples/sample-app` for reference 
 ## Server-side Props
 
 Unlike Next.js, `getServerSideProps` lives in separate files like `pages/page-name.props.ts` for clear separation between server and client code without any tricks. See [GET_SERVER_SIDE_PROPS.md](./docs/GET_SERVER_SIDE_PROPS.md) for details.
+
+## Start development server
+
+```bash
+bun autobun dev
+```
+
+## Build
+
+```bash
+bun autobun build
+```
+
+## Start production server
+
+```bash
+bun autobun start
+```
+
+## FAQ
+
+### Why Bun? Can I use Node.js instead?
+
+No, you can't use Node.js. Bun is fast and comes with modern APIs out of the box that don't require pulling in tons of dependencies or writing a lot of boilerplate code.
+
+### Why Preact instead of React?
+
+Preact performs 10x faster, which reduces server load and/or allows for higher RPS. Also, React adds 100 KB to the bundle (gzipped), which increases the Hello World page size by 12x.
+
+### Where's client-side routing? How do you live without SPA?
+
+SPAs are overrated. Created to improve user experience, they've turned into huge unwieldy spaceships with bloated bundles. Modern SPAs often don't speed anything up, they just make life harder for both users and developers. Autobun's goal is to be a tool for building simple and efficient websites, so there's no client-side rendering out of the box.

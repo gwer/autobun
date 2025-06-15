@@ -1,5 +1,5 @@
-import { MatchedRoute } from 'bun';
-import { FunctionComponent, VNode } from 'preact';
+import { type MatchedRoute } from 'bun';
+import { type FunctionComponent, type VNode } from 'preact';
 
 export type GetServerSidePropsCtx = {
   route: MatchedRoute;

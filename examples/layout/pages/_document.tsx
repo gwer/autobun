@@ -1,5 +1,5 @@
-import { FunctionComponent } from 'preact';
-import { DocumentFullProps } from 'autobun';
+import { type FunctionComponent } from 'preact';
+import { type DocumentFullProps } from 'autobun';
 const Document: FunctionComponent<DocumentFullProps> = ({
   title,
   ctx,

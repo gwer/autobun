@@ -1,4 +1,4 @@
-import { AppGetServerSideProps } from 'autobun';
+import { type AppGetServerSideProps } from 'autobun';
 
 const getServerSideProps: AppGetServerSideProps = async (ctx, pageProps) => {
   return {

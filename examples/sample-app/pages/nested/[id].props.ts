@@ -1,4 +1,4 @@
-import { PageGetServerSideProps } from 'autobun';
+import { type PageGetServerSideProps } from 'autobun';
 
 type NestedPageProps = {
   id: number;
