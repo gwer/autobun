@@ -1,0 +1,20 @@
+{
+  "name": "examples/layout",
+  "scripts": {
+    "dev": "bun autobun dev",
+    "start": "bun autobun start",
+    "build": "bun autobun build",
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "autobun": "workspace:*",
+    "preact": "^10.25.0",
+    "preact-render-to-string": "^6.5.11"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@playwright/test": "^1.53.0",
+    "playwright": "^1.53.0",
+    "typescript": "^5.0.0"
+  }
+}

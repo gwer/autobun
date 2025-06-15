@@ -1,0 +1,15 @@
+{
+  "name": "autobun-monorepo",
+  "module": "index.ts",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "test": "bun run --filter 'examples/*' --elide-lines=0 test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
