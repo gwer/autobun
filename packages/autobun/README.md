@@ -42,6 +42,13 @@ Next.js : █████ 4.5k
 Autobun : ███████████████████████ 22.5k
 ```
 
+### Dependencies install time
+
+```
+bun add next    : ██████████████████ 210s
+bun add autobun : █ 12s
+```
+
 # Getting Started
 
 ## Install Bun
@@ -68,7 +75,7 @@ bun init # Choose "Blank" template
 bun add autobun preact preact-render-to-string
 ```
 
-Autobun doesn't have its own preact Preact to let you choose your preferred version and avoid conflicts.
+Autobun doesn't have its own Preact to let you choose your preferred version and avoid conflicts.
 
 ## Activate Preact
 
@@ -78,7 +85,7 @@ Add `"jsxImportSource": "preact"` to `tsconfig.json`.
 
 Add `_document.tsx` and `_app.tsx` files. See [examples/sample-app](./examples/sample-app) for reference.
 
-Start creating pages in the `pages/` directory. Works similar to Next.js.
+Start creating pages in the `pages/` directory. Works similar to Next.js pages router.
 
 ## Examples
 
@@ -119,3 +126,7 @@ Preact performs 10x faster, which reduces server load and/or allows for higher R
 ### Where's client-side routing? How do you live without SPA?
 
 SPAs are overrated. Created to improve user experience, they've turned into huge unwieldy spaceships with bloated bundles. Modern SPAs often don't speed anything up, they just make life harder for both users and developers. Autobun's goal is to be a tool for building simple and efficient websites, so there's no client-side rendering out of the box.
+
+### Why no React Server Components (RSC)?
+
+RSC is an interesting idea that allows developers to pay less attention to architecture design. But Autobun is about efficiency and straightforwardness. You prepare data for a page, you send it to rendering. That's it. No magic, no complex abstractions, no blur between server and client boundaries. When you need server logic or data, you work with it on the server in one place. Clear separation leads to better performance and easier debugging.
