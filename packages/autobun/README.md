@@ -38,8 +38,10 @@ Autobun : █ 8.6 KB
 ### RPS
 
 ```
-Next.js : █████ 4.5k
-Autobun : ███████████████████████ 22.5k
+Next.js (Static, App Router)    : █████ 5k
+Next.js (Static, Pages Router)  : ██████ 6k
+Next.js (Dynamic, Pages Router) : ██ 1.7k
+Autobun (Dynamic)               : ███████████████████████ 24k
 ```
 
 ### Dependencies install time
