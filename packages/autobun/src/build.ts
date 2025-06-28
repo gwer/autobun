@@ -39,7 +39,11 @@ function createBuildConfigs(): {
 
   const filterClientEntryPoints = (
     entryPoints: { in: string; out: string }[]
-  ) => entryPoints.filter((entry) => !entry.out.endsWith('.props'));
+  ) =>
+    entryPoints.filter(
+      (entry) =>
+        !entry.out.endsWith('.props') && !entry.out.startsWith('pages/api/')
+    );
 
   const hydrateEntryPoints = [
     {

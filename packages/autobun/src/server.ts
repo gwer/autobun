@@ -6,6 +6,7 @@ import { getAllProps } from './pageProps';
 import { renderPage } from './page';
 import { isPagePropsNotFound, isPagePropsRedirect } from './types';
 import { getConfig } from './config';
+import { handleApi } from './api';
 
 const PROJECT_ROOT = process.cwd();
 const PUBLIC_DIR = path.resolve(PROJECT_ROOT, 'public');
@@ -94,6 +95,10 @@ export default ({ dev }: { dev: boolean }) => {
           return new Response('File not found', {
             status: 404,
           });
+        }
+
+        if (match.src.startsWith('api/')) {
+          return handleApi(request, match, version);
         }
 
         const props = await getAllProps(match, appPath, version, request);
