@@ -1,6 +1,7 @@
 {
   "name": "autobun",
   "version": "0.2.0",
+  "repository": "github:gwer/autobun",
   "bin": "src/autobun.ts",
   "exports": {
     ".": "./src/index.ts"
