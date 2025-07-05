@@ -20,20 +20,6 @@ When enabled, static assets (CSS, JS, images, etc.) will be compressed using gzi
 AUTOBUN_GZIP_STATIC=true bun autobun start
 ```
 
-### AUTOBUN_PUBLIC_PATH
-
-Sets the prefix for asset URLs. Useful for CDN integration or serving assets from a different domain/path.
-
-- **Type:** `string`
-- **Default:** `""` (empty string)
-
-**Examples:**
-
-```bash
-# Serve assets from CDN
-AUTOBUN_PUBLIC_PATH=https://cdn.example.com bun autobun build
-```
-
 ## Setting Environment Variables
 
 ### Using .env files
@@ -42,13 +28,12 @@ Create a `.env` file in your project root:
 
 ```env
 AUTOBUN_GZIP_STATIC=true
-AUTOBUN_PUBLIC_PATH=https://cdn.example.com
 ```
 
 ### Using command line
 
 ```bash
-AUTOBUN_GZIP_STATIC=true AUTOBUN_PUBLIC_PATH=/assets bun autobun start
+AUTOBUN_GZIP_STATIC=true bun autobun start
 ```
 
 ### Different environments

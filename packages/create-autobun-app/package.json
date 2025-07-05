@@ -1,0 +1,30 @@
+{
+  "name": "create-autobun-app",
+  "version": "0.2.2",
+  "author": "gwer",
+  "repository": "github:gwer/autobun",
+  "description": "Create a new Autobun app",
+  "main": "index.ts",
+  "bin": {
+    "create-autobun-app": "./index.ts"
+  },
+  "keywords": [
+    "autobun",
+    "bun",
+    "preact",
+    "template"
+  ],
+  "dependencies": {
+    "glob": "^10.3.10",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/prompts": "^2.4.9",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "index.js",
+    "template/"
+  ]
+}

@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+*.log
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.autobun/

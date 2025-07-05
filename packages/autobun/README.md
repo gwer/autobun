@@ -63,31 +63,15 @@ curl -fsSL https://bun.sh/install | bash
 bun upgrade
 ```
 
-## Initialize Project
-
-If you don't have a project yet:
+## Create Project
 
 ```bash
-bun init # Choose "Blank" template
+bun create autobun-app my-app
+cd my-app
+bun install
 ```
 
-## Install Dependencies
-
-```bash
-bun add autobun preact preact-render-to-string
-```
-
-Autobun doesn't have its own Preact to let you choose your preferred version and avoid conflicts.
-
-## Activate Preact
-
-Add `"jsxImportSource": "preact"` to `tsconfig.json`.
-
-## Create Pages
-
-Add `_document.tsx` and `_app.tsx` files. See [examples/sample-app](./examples/sample-app) for reference.
-
-Start creating pages in the `pages/` directory. Works similar to Next.js pages router.
+For manual project setup without using the scaffolding tool, see [Manual Setup](./docs/MANUAL_SETUP.md).
 
 ## Examples
 
@@ -115,20 +99,20 @@ bun autobun build
 bun autobun start
 ```
 
-## FAQ
+# FAQ
 
-### Why Bun? Can I use Node.js instead?
+## Why Bun? Can I use Node.js instead?
 
 No, you can't use Node.js. Bun is fast and comes with modern APIs out of the box that don't require pulling in tons of dependencies or writing a lot of boilerplate code.
 
-### Why Preact instead of React?
+## Why Preact instead of React?
 
 Preact performs 10x faster, which reduces server load and/or allows for higher RPS. Also, React adds 100 KB to the bundle (gzipped), which increases the Hello World page size by 12x.
 
-### Where's client-side routing? How do you live without SPA?
+## Where's client-side routing? How do you live without SPA?
 
 SPAs are overrated. Created to improve user experience, they've turned into huge unwieldy spaceships with bloated bundles. Modern SPAs often don't speed anything up, they just make life harder for both users and developers. Autobun's goal is to be a tool for building simple and efficient websites, so there's no client-side rendering out of the box.
 
-### Why no React Server Components (RSC)?
+## Why no React Server Components (RSC)?
 
 RSC is an interesting idea that allows developers to pay less attention to architecture design. But Autobun is about efficiency and straightforwardness. You prepare data for a page, you send it to rendering. That's it. No magic, no complex abstractions, no blur between server and client boundaries. When you need server logic or data, you work with it on the server in one place. Clear separation leads to better performance and easier debugging.
